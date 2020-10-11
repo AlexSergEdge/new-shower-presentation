@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Shower Presentation Engine</title>
+    <title>Моделирование углеводного обмена в организме человека</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
@@ -14,17 +14,16 @@
 <body class="shower list">
 
     <header class="caption">
-        <h1>Shower Presentation Engine</h1>
-        <p>Yours Truly, Famous Inc.</p>
+        <h1>Моделирование углеводного обмена</h1>
     </header>
 
     <section class="slide" id="cover">
-        <h2>Shower Presentation Engine</h2>
-        <p>Brought to you by <a href="http://pepelsbey.net">Vadim Makeev</a></p>
+        <h2>Моделирование углеводного обмена в организме человека</h2>
+        <p>Бринк Александр, ИУ3-32М</p>
         <figure>
-            <img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
+            <img class="cover" src="pictures/my/cover.jpg" alt="Blue smoke">
             <figcaption class="copyright right white">
-                <a href="http://fiftyfootshadows.net/">© John Carey</a>
+                <a href="https://wallpaperset.com/blue-smoke-wallpaper">wallpaperset</a>
             </figcaption>
         </figure>
         <style>
@@ -40,7 +39,7 @@
                 text-align: center;
                 color: white;
                 font-style: italic;
-                font-size: 20px;
+                font-size: 28px;
             }
 
             #cover p a {
@@ -50,156 +49,193 @@
     </section>
 
     <section class="slide">
-        <h2>Shower key features</h2>
+        <h2>Основные пункты презентации</h2>
         <ol>
-            <li>Built on HTML, CSS and JavaScript</li>
-            <li>Works in all modern browsers</li>
-            <li>Themes are separated from engine</li>
-            <li>Fully keyboard accessible</li>
-            <li>Printable to PDF</li>
+            <li>Постановка задачи</li>
+            <li>Акутальность темы</li>
+            <li>Математические модели</li>
+            <li>Реализация</li>
+            <li>Промежуточные результаты</li>
+            <li>Постановка эксперимента</li>
         </ol>
-        <p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
     </section>
 
     <section class="slide">
-        <h2>Plain text on your slides</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
-    </section>
-
-    <section class="slide">
-        <h2>Two columns if you like</h2>
+        <h2>Актуальность темы</h2>
+        <p>Терапия сахарного диабета с помощью электронных устройств:</p>
         <div class="columns two">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+            <img src="pictures/my/insulin_pump.jpg" width="299" height="180">
+            <img src="pictures/my/cgm.jpg" width="330" height="180">
+            <p>Инсулиновые помпы</p>
+            <p>CGM-системы*</p>
         </div>
+        <p class="note">*CGM - Continuous Glucose Monitoring - непрерывный мониторинг глюкозы</p>
     </section>
 
     <section class="slide">
-        <h2>All kind of lists</h2>
+        <h2>Недостатки терапии</h2>
         <ol>
-            <li>Simple lists are marked with bullets</li>
-            <li>Ordered lists begin with a number</li>
-            <li>You can even nest lists one inside another
-                <ul>
-                    <li>Or mix their types</li>
-                    <li>But do not go too far</li>
-                    <li>Otherwise audience will be bored</li>
-                </ul>
-            </li>
-            <li>Look, seven rows exactly!</li>
+            <li>Необходимость ручной первоначальной настройки системы</li>
+            <li>Слабая адаптивность терапии при изменении дневной активности</li>
+            <li>Отсутсвие методов автоматического предотвращения гипогликемий*</li>
         </ol>
+        <p class="note">*гипокгликемия - опасное состояние организма при критически низкой концентрации глюкозы в крови</p>
+
     </section>
 
     <section class="slide">
-        <h2>Serious citations</h2>
+        <h2>Постановка задачи</h2>
+        <ol>
+            <li>Выбор и реализация модели углеводного обмена в организме человека</li>
+            <li>Выявление дополнительных факторов, влияющих на терапию</li>
+            <li>Разработка методики подстройки индивидуальных параметров</li>
+        </ol>
+        <img src="pictures/my/close_loop.jpg" width="768" height="216">
+    </section>
+
+    <section class="slide">
+        <h2>Математические модели</h2>
+        <table>
+            <tr>
+                <th scope="col">Модель</th>
+                <th>Достоинства</th>
+                <th>Недостатки</th>
+            </tr>
+            <tr>
+                <th scope="row">Sorensen</th>
+                <td>
+                    <ul style="font-size:16px">
+                        <li>Учет динамики глюкагона</li>
+                        <li>Удобные коэффициенты для симуляции диабета</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul style="font-size:16px">
+                        <li>Отсутствие вариативности параметров</li>
+                        <li>Внутривенное введение инсулина</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">UVa/Padova</th>
+                <td>
+                    <ul style="font-size:16px">
+                        <li>Одобрено FDA</li>
+                        <li>Проработанная модель абсорбции глюкозы</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul style="font-size:16px">
+                        <li>Нет учета динамики глюкагона</li>
+                        <li>Нет внутрипациентной вариативности</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Cambridge</th>
+                <td>
+                    <ul style="font-size:16px">
+                        <li>Модель физической активности</li>
+                        <li>Выборка клинических данных</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul style="font-size:16px">
+                        <li>Нет учета динамики глюкагона</li>
+                        <li>Слабая модель абсорбции глюкозы</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </section>
+    
+    <section class="slide">
+        <h2>Прототип функции, реализующей модель UVa/Padova</h2>
+        <pre style="font-size:18px">
+            <code>def Simulation(</code>
+            <code>  BW_input=80, <span class="comment">#вес тела</span></code>
+            <code>  D_input=100000, <span class="comment">#масса пищи</span></code>
+            <code>  Gpb_input=162, <span class="comment">#базальный уровень глюкозы в плазме</span></code>
+            <code>  time_input=420, <span class="comment">#длительность моделирования</span></code>
+            <code>  samples_input=420, <span class="comment">#число временных отсчетов</span></code>
+            <code>  Gp0_input=162, <span class="comment">#начальный уровень глюкозы в плазме</span></code>
+            <code>  meal_duration=0 <span class="comment">#длительность приема пищи</span></code>
+            <code>):</code>
+        </pre>
+    </section>
+   
+    <section class="slide">
+        <h2>Результаты моделирования</h2>
+        <p>Глюкоза и инсулин в плазме крови:</p>
         <figure>
-            <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-            </blockquote>
-            <figcaption>Marcus Tullius Cicero</figcaption>
+            <img class="cover" src="pictures/my/results1.jpg" alt="Results">
         </figure>
     </section>
 
     <section class="slide">
-        <h2>Code samples</h2>
-        <pre>
-            <code>&lt;!DOCTYPE html&gt;</code>
-            <code class="mark">&lt;html lang="en"&gt;</code>
-            <code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
-            <code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-            <code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-            <code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-            <code><mark>&lt;/head&gt;</mark></code>
-        </pre>
+        <h2>Результаты моделирования</h2>
+        <p>Утилизация глюкозы и секреция инсулина:</p>
+        <figure>
+            <img class="cover" src="pictures/my/results2.jpg" alt="Results">
+        </figure>
     </section>
 
     <section class="slide">
-        <h2>Even tables</h2>
-        <table>
-        <tr>
-            <th scope="col">Locavore</th>
-            <th>Umami</th>
-            <th>Helvetica</th>
-            <th>Vegan</th>
-        </tr>
-        <tr>
-            <th scope="row">Fingerstache</th>
-            <td>Kale</td>
-            <td>Chips</td>
-            <td>Keytar</td>
-        </tr>
-        <tr>
-            <th scope="row">Sriracha</th>
-            <td>Gluten-free</td>
-            <td>Ennui</td>
-            <td>Keffiyeh</td>
-        </tr>
-        <tr>
-            <th scope="row">Thundercats</th>
-            <td>Jean</td>
-            <td>Shorts</td>
-            <td>Biodiesel</td>
-        </tr>
-        <tr>
-            <th scope="row">Terry</th>
-            <td>Richardson</td>
-            <td>Swag</td>
-            <td>Blog</td>
-        </tr>
-        </table>
-        <p>It’s good to have information organized.</p>
+        <h2>Результаты моделирования</h2>
+        <p>Выработка глюкозы печенью и скорость всасывания глюкозы:</p>
+        <figure>
+            <img class="cover" src="pictures/my/results3.jpg" alt="Results">
+        </figure>
     </section>
 
-    <section class="slide" id="picture">
-        <h2>Pictures</h2>
+    <section class="slide">
+        <h2>Моделирование мгновенного приема пищи</h2>
+        <p>Масса глюкозы (жидкой и твердой) в желудке и кишечнике при мгновенном приеме 100 грамм углеводов:</p>
         <figure>
-            <img class="cover" src="pictures/picture.jpg" alt="Orange typewriter on a wooden table close-up">
-            <figcaption class="copyright right white">
-                <a href="http://fiftyfootshadows.net/">© John Carey</a>
-            </figcaption>
+            <img class="cover" src="pictures/my/food_instant.jpg" alt="Results">
+        </figure>
+    </section>
+
+
+    <section class="slide">
+        <h2>Моделирование растянутого приема пищи</h2>
+        <p>Масса глюкозы (жидкой и твердой) в желудке и кишечнике при растянутом на 30 минут приеме 100 грамм углеводов:</p>
+        <figure>
+            <img class="cover" src="pictures/my/food_30m.jpg" alt="Results">
+        </figure>
+    </section>
+
+    <section class="slide">
+        <h2>Постановка эксперимента:</h2>
+        <ol>
+            <li>
+                Сбор информации о:
+                <ul>
+                    <li>Профиле глюкозы (CGM-система)</li>
+                    <li>Физической активности (фитнес-трекер)</li>
+                    <li>Употребленной пище (дневник самоконтроля)</li>
+                    <li>Погодных условиях</li>
+                </ul>
+            </li>
+            <li>Систематизация и анализ информации</li>
+            <li>Подбор параметров модели</li>
+        </ol>
+    </section>
+    
+    <section class="slide" id="picture">
+        <h2>Спасибо за внимание!</h2>
+        <figure>
+            <img class="cover" src="pictures/my/cover.jpg" alt="Blue smoke">
         </figure>
         <style>
             #picture h2 {
+                margin: 30px 0 0;
                 color: white;
+                text-align: center;
+                font-size: 70px;
             }
         </style>
     </section>
-
-    <section class="slide">
-        <h2 class="shout shrink">You can even shout this way</h2>
-    </section>
-
-    <section class="slide">
-        <h2>Inner navigation</h2>
-        <ol>
-            <li>Lets you reveal list items one by one</li>
-            <li class="next">To keep some key points</li>
-            <li class="next">In secret from audience</li>
-            <li class="next">But it will work only once</li>
-            <li class="next">Nobody wants to see the same joke twice</li>
-        </ol>
-    </section>
-
-    <section class="slide" id="see-more">
-        <h2 class="shout">
-            <img src="pictures/logo.svg" alt="Shower logo">
-            <a href="https://github.com/shower/shower">See more on GitHub</a>
-        </h2>
-        <style>
-            #see-more h2 {
-                font-size: 100px
-            }
-
-            #see-more img {
-                width: 0.72em;
-                height: 0.72em;
-            }
-        </style>
-    </section>
-
-    <footer class="badge">
-        <a href="https://github.com/shower/shower">Fork me on GitHub</a>
-    </footer>
 
     <div class="progress"></div>
 
